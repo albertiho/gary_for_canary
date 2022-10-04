@@ -10,7 +10,7 @@ should work on every platform that can install python and the requirements
 can't really be used while playing other games
 
 ## Installation
-If you have any problems installing this project, DM `J00stie` in-game or join the `omuns` clan chat! We're keen to help any other player who wishes to make the game less grindy and is interested in using their sleeping hours efficiently! 😋
+If you have any problems installing this project, DM `ironaraxxor` in-game or join the `omuns` clan chat! We're keen to help any other player who wishes to make the game less grindy and is interested in using their sleeping hours efficiently! 😋
 
 If you've got python3.9 on windows, you should be able to install the requirements by openining a terminal in the project folder and then running
 
