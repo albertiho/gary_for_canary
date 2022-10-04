@@ -27,7 +27,7 @@ def coordinate_initialization(x, y, button, pressed):
     global click_area_coordinates
     global gote_area_coordinates
     if pressed:
-        # on left click, add coordinate to list
+        # on right click, add coordinate to list
         if button == Button.right:
             if (len(click_area_coordinates)) < 4:
                 click_area_coordinates.append([x, y])
@@ -36,13 +36,14 @@ def coordinate_initialization(x, y, button, pressed):
             else:
                 listener.stop()
 
-        # on right click empty list
-        if button == Button.left:
+        # on middle click empty list
+        if button == Button.middle:
             click_area_coordinates = []
             gote_area_coordinates = []
             print("Click area and GOTE area coordinates reset.")
-        # use middle click to define gote area
-        if button == Button.middle:
+            
+        # use left click to define gote area
+        if button == Button.left:
             if (len(gote_area_coordinates)) < 4:
                 gote_area_coordinates.append([x, y])
                 if (len(gote_area_coordinates)) == 4:
@@ -160,9 +161,9 @@ if __name__ == "__main__":
 
     print("Create a rectangle by RIGHT-clicking the corners of the click area.")
     print()
-    print("Use the MIDDLE-mouse button to click the corners of your GOTE if you want to enable gote charging.")
+    print("Use the LEFT-mouse button to click the corners of your GOTE if you want to enable gote charging.")
     print()
-    print("You can reset click and gote area initialization values with LEFT-click.")
+    print("You can reset click and gote area initialization values with MIDDLE-click.")
 
     with Listener(on_click=coordinate_initialization) as listener:
         listener.join()
