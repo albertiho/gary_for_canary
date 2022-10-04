@@ -177,17 +177,20 @@ if __name__ == "__main__":
 
     with Listener(on_click=gote_charge_initialization) as listener:
         listener.join()
-
-    gote_height = gote_clicks["right"][1] - gote_clicks["left"][1]
-    print("\nGOTE charge height configured, height is " + str(gote_height) + " pixels. (value should be negative)")
+        
+    if len(gote_area_coordinates) == 4:
+        gote_height = gote_clicks["right"][1] - gote_clicks["left"][1]
+        print("\nGOTE charge height configured, height is " + str(gote_height) + " pixels. (value should be negative)")
+        
     print("\nStarting auto-click cycle.")
     print("This process can be stopped by pressing CTRL+C a few times with the terminal as active window.")
 
     main_thread = threading.Thread(target=autoclick_main, daemon=True)
     main_thread.start()
 
-    gote_refill_thread = threading.Thread(target=perform_gote_refill, daemon=True)
-    gote_refill_thread.start()
+    if len(gote_area_coordinates) == 4:
+        gote_refill_thread = threading.Thread(target=perform_gote_refill, daemon=True)
+        gote_refill_thread.start()
 
     time.sleep(DEFAULT_MAX_RUN_TIME)
     sys.exit()
