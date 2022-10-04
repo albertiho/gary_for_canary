@@ -23,7 +23,7 @@ On MAC/unix based operating systems, you'll probably have to define that we're u
 `$ pip3 install -r requirements.txt`
 
 ## running
-`python3 gary.py`
+call python to run the projects main file by inserting `$ python3 gary.py` to your terminal
 
 ### 1. Setting up your clicking areas
 use your right-click to create a square shapeed area on screen which will not cause your character to move if clicked in. The square isn't visible on screen because I couldnt find an easy solution on how to draw on screen and didnt really want to put too much time into this.
