@@ -32,7 +32,7 @@ def coordinate_initialization(x, y, button, pressed):
             if (len(click_area_coordinates)) < 4:
                 click_area_coordinates.append([x, y])
                 if (len(click_area_coordinates)) == 4:
-                    print("\nClick area configured. Press right-click to continue or use middle mouse to configure GOTE click area.")
+                    print("\nClick area configured. Press right-click to continue or use left-click to configure GOTE click area.")
             else:
                 listener.stop()
 
@@ -47,7 +47,7 @@ def coordinate_initialization(x, y, button, pressed):
             if (len(gote_area_coordinates)) < 4:
                 gote_area_coordinates.append([x, y])
                 if (len(gote_area_coordinates)) == 4:
-                    print("\nGOTE area configured. Press middle-click to continue or use right click to configure click area.")
+                    print("\nGOTE area configured. Press left-click to continue or use right click to configure click area.")
             else:
                 listener.stop()
 
