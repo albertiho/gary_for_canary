@@ -155,8 +155,7 @@ if __name__ == "__main__":
     """
         This function is executed first when you start up gary, and it will perform the following steps:
         1. Configure the area you want gary to poke
-        2. Draw the area on screen
-        3. Start the clicking loop
+        2. Start the clicking loop
     """
 
     print("Create a rectangle by RIGHT-clicking the corners of the click area.")
