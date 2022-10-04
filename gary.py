@@ -1,4 +1,4 @@
-#! python3import threading
+#! python3
 
 import random
 import sys
