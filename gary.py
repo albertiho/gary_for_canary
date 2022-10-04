@@ -118,7 +118,7 @@ def perform_click():
 def perform_gote_refill():
     global gote_refilling
     while True:
-        time.sleep(*DEFAULT_GOTE_REFILL_INTERVAL)
+        time.sleep(DEFAULT_GOTE_REFILL_INTERVAL)
         # stop the mouse from moving while gote refill is happening
         gote_refilling = True
         move_to_gote_x = random.randint(gote_area_x_limits["min"], gote_area_x_limits["max"])
